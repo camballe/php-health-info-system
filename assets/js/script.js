@@ -8,7 +8,9 @@ const county = document.getElementById("county");
 const clearBtn = document.querySelector(".clear-btn");
 
 form.addEventListener("submit", (e) => {
-  validateInputs();
+  if (!validateInputs()) {
+    e.preventDefault(); // Prevent form submission if validation fails
+  }
 });
 
 clearBtn.addEventListener("click", () => {
@@ -44,34 +46,44 @@ const validateInputs = () => {
   const genderValue = gender.value.trim();
   const countyValue = county.value.trim();
 
+  let isValid = true;
+
   if (firstnameValue === "") {
     setError(firstname, "First name is required.");
+    isValid = false;
   } else {
     setSuccess(firstname);
   }
   if (middlenameValue === "") {
     setError(middlename, "Middle name is required.");
+    isValid = false;
   } else {
     setSuccess(middlename);
   }
   if (surnameValue === "") {
     setError(surname, "Surname is required.");
+    isValid = false;
   } else {
     setSuccess(surname);
   }
   if (dobValue === "") {
     setError(dob, "Date of birth is required.");
+    isValid = false;
   } else {
     setSuccess(dob);
   }
   if (genderValue === "") {
     setError(gender, "Gender is required.");
+    isValid = false;
   } else {
     setSuccess(gender);
   }
   if (countyValue === "") {
     setError(county, "County is required.");
+    isValid = false;
   } else {
     setSuccess(county);
   }
+
+  return isValid;
 };
