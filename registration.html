@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Information System</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/hospital-logo.png"
+      type="image/x-icon"
+    />
+    <script defer src="assets/js/script.js"></script>
+  </head>
+
+  <body>
+    <section class="upper-section">
+      <header class="header">
+        <img
+          src="assets/images/hospital-logo.png"
+          alt="Hospital Logo"
+          class="nav-logo"
+        />
+      </header>
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/registration.html">Registration</a></li>
+          <li><a href="/records.php">Records</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/contacts.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </section>
+    <main class="main">
+      <aside class="sidebar">
+        <ul class="sidebar-links">
+          <li><a href="/registration.html">Registration</a></li>
+          <li><a href="/records.php">Records</a></li>
+        </ul>
+      </aside>
+      <section class="main-content">
+        <form
+          class="reg-form"
+          id="reg-form"
+          action="add_patient.php"
+          method="post"
+        >
+          <h1>Patient Registration</h1>
+          <div class="input-box">
+            <label for="firstname">First Name</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              class="input-field"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="input-box">
+            <label for="middlename">Middle Name</label>
+            <input
+              type="text"
+              id="middlename"
+              name="middlename"
+              class="input-field"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="input-box">
+            <label for="surname">Surname</label>
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              class="input-field"
+            />
+            <div class="error"></div>
+          </div>
+          <div class="input-box">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" class="input-field" />
+            <div class="error"></div>
+          </div>
+          <div class="input-box">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" class="select-field">
+              <option value="">Select your gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+            <div class="error"></div>
+          </div>
+          <div class="input-box">
+            <label for="county">County</label>
+            <select id="county" name="county" class="select-field">
+              <option value="">Select a county</option>
+              <option value="Baringo">Baringo</option>
+              <option value="Bomet">Bomet</option>
+              <option value="Bungoma">Bungoma</option>
+              <option value="Busia">Busia</option>
+              <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+              <option value="Embu">Embu</option>
+              <option value="Garissa">Garissa</option>
+              <option value="Homa Bay">Homa Bay</option>
+              <option value="Isiolo">Isiolo</option>
+              <option value="Kajiado">Kajiado</option>
+              <option value="Kakamega">Kakamega</option>
+              <option value="Kericho">Kericho</option>
+              <option value="Kiambu">Kiambu</option>
+              <option value="Kilifi">Kilifi</option>
+              <option value="Kirinyaga">Kirinyaga</option>
+              <option value="Kisii">Kisii</option>
+              <option value="Kisumu">Kisumu</option>
+              <option value="Kitui">Kitui</option>
+              <option value="Kwale">Kwale</option>
+              <option value="Laikipia">Laikipia</option>
+              <option value="Lamu">Lamu</option>
+              <option value="Machakos">Machakos</option>
+              <option value="Makueni">Makueni</option>
+              <option value="Mandera">Mandera</option>
+              <option value="Marsabit">Marsabit</option>
+              <option value="Meru">Meru</option>
+              <option value="Migori">Migori</option>
+              <option value="Mombasa">Mombasa</option>
+              <option value="Murang'a">Murang'a</option>
+              <option value="Nairobi">Nairobi</option>
+              <option value="Nakuru">Nakuru</option>
+              <option value="Nandi">Nandi</option>
+              <option value="Narok">Narok</option>
+              <option value="Nyamira">Nyamira</option>
+              <option value="Nyandarua">Nyandarua</option>
+              <option value="Nyeri">Nyeri</option>
+              <option value="Samburu">Samburu</option>
+              <option value="Siaya">Siaya</option>
+              <option value="Taita-Taveta">Taita-Taveta</option>
+              <option value="Tana River">Tana River</option>
+              <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+              <option value="Trans Nzoia">Trans Nzoia</option>
+              <option value="Turkana">Turkana</option>
+              <option value="Uasin Gishu">Uasin Gishu</option>
+              <option value="Vihiga">Vihiga</option>
+              <option value="Wajir">Wajir</option>
+              <option value="West Pokot">West Pokot</option>
+            </select>
+            <div class="error"></div>
+          </div>
+          <div class="form-btns">
+            <input type="submit" value="Send" class="submit-btn" />
+            <button type="button" class="clear-btn">Clear</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">&copy; Kambale Enoch Nyambu | P15/1921/2022</footer>
+  </body>
+</html>

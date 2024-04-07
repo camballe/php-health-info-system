@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: rgb(57, 57, 163);
+}
+
+.upper-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.header {
+  width: 100vw;
+  display: grid;
+  place-content: start;
+  padding: 2rem;
+  background-image: linear-gradient(to right, #2e8b57, transparent),
+    url("./../images/green-leaf-background.jpg");
+  background-size: auto, cover;
+}
+
+/* Navbar styles */
+.nav {
+  background-color: green;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border-bottom: 2px solid #2e8b57;
+}
+
+.nav-logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin-right: 1.25rem;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Apply hover effects to nav links */
+.nav-links li a:hover {
+  color: rgb(57, 57, 163);
+}
+
+/* Main content styles */
+.main {
+  border-top: 2px solid #4caf50;
+  border-bottom: 2px solid #4caf50;
+  padding: 1rem 0 0.5rem 0;
+  margin: 0.5rem 0 0.5rem 0;
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.sidebar {
+  width: 12.5rem;
+  background-color: green;
+  padding: 1.25rem;
+  border-right: 2px solid #2e8b57;
+}
+
+.sidebar-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Add separation lines between sidebar links */
+.sidebar-links li {
+  margin-bottom: 0.63rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.3rem;
+}
+
+/* Apply hover effects to sidebar links */
+.sidebar-links li a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-links li a:hover {
+  color: rgb(57, 57, 163);
+}
+
+.main-content {
+  flex: 1;
+  padding: 1.25rem;
+}
+
+.main-content h1 {
+  text-align: start;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #4caf50, #2e8b57);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .reg-form {
+  width: 30rem;
+} */
+
+.input-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.input-box label {
+  width: 8rem;
+}
+
+.input-field {
+  padding: 0.3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  outline: 0;
+  border: solid 0.05rem #333;
+  width: 20rem;
+  background-color: aliceblue;
+}
+
+.select-field {
+  padding: 0.3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  outline: 0;
+  border: solid 0.05rem #333;
+  width: 20rem;
+  background-color: aliceblue;
+}
+
+.input-box.success input,
+.input-box.success select {
+  border-color: #09c372;
+}
+
+.input-box.error input,
+.input-box.error select {
+  border-color: #ff3860;
+}
+
+.input-box .error {
+  color: #ff3860;
+  font-size: 0.7rem;
+  height: 0.9rem;
+}
+
+.form-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 18rem;
+}
+
+.submit-btn {
+  background-color: green;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  border: none;
+  transition: all ease-in-out 0.3s;
+}
+
+.clear-btn {
+  background-color: #fff;
+  color: green;
+  font-size: 1rem;
+  padding: 0.4rem 1.5rem;
+  margin-top: 1rem;
+  border: solid 0.1rem green;
+  transition: all ease-in-out 0.3s;
+}
+
+.clear-btn:hover {
+  cursor: pointer;
+  border-color: #2e8b57;
+}
+
+.submit-btn:hover {
+  background-color: #2e8b57;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+th {
+  background-color: lightblue;
+}
+
+tbody tr:nth-child(even) {
+  background-color: lightblue;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 1.25rem;
+  background-color: #fff;
+}
