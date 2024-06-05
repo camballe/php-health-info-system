@@ -1,9 +1,9 @@
 <?php
 
 DEFINE('DB_USER', 'root');
-DEFINE('DB_PASSWORD', 'Password1!');
+DEFINE('DB_PASSWORD', 'mrKEN@21411');
 
-$dsn = 'mysql:host=localhost;dbname=health-info-system';
+$dsn = 'mysql:host=localhost;dbname=health_info_system';
 try {
     $db = new PDO($dsn, DB_USER, DB_PASSWORD);
 } catch (PDOException $e) {
